@@ -1,0 +1,85 @@
+.mask {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 150rpx 20rpx 30rpx;
+  color: white;
+  position: relative;
+}
+
+.m-left {
+  position: absolute;
+  width: 250rpx;
+  height: 350rpx;
+  left: 30rpx;
+  bottom: -50rpx;
+}
+
+.m-left image {
+  width: 100%;
+  height: 100%;
+}
+
+.m-right {
+  padding-left: 300rpx;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+.o_title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2rem;
+}
+
+.rating-star {
+  display: flex;
+  align-items: center;
+}
+
+.rating {
+  font-size: 80rpx;
+}
+
+.star {
+  padding-left: 20rpx;
+  font-size: 25rpx;
+}
+
+.detail-info {
+  padding: 70rpx 15rpx 0;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn button {
+  width: 45%;
+  color: gold;
+  border-color: gold;
+  line-height: 2.5em;
+  font-size: 35rpx;
+}
+
+.detail-summary {
+  margin-top: 100rpx;
+}
+
+.intro {
+  color: rgba(150, 150, 150, 0.7);
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.summary {
+  line-height: 1.5rem;
+  font-size: 30rpx;
+  text-indent: 50rpx;
+}
+
+.info01,
+.info02,
+.info03 {
+  font-size: 30rpx;
+  line-height: 60rpx;
+}

@@ -1,0 +1,48 @@
+<view class='detail-content'>
+  <!-- datail-header -->
+  <view class='detail-header' style='background:url("{{detailsArr.images.medium}}") no-repeat 0 0/cover'>
+    <view class='mask'>
+      <view class='m-left'>
+        <image src="{{detailsArr.images.small}}"></image>
+      </view>
+      <view class='m-right'>
+        <view>{{detailsArr.title}}</view>
+        <view class="o_title">{{detailsArr.original_title}}</view>
+        <view class="rating-star">
+          <view class="rating">{{detailsArr.rating.average}}</view>
+          <view class="star">
+          <i-rate size="15" value="{{detailsArr.rating.average/2}}"></i-rate>
+          <view>{{detailsArr.ratings_count}}人评价</view>
+           </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- detail-info -->
+  <view class="detail-info">
+    <view class="info01">
+      <text>{{detailsArr.countries}}</text>
+      <text wx:for="{{detailsArr.genres}}" wx:key="index">{{item}} {{index != detailsArr.genres.length-1 ? '/' : ''}} </text>
+    </view>
+    <view class="info02">
+      <text>{{detailsArr.year}}年上映</text>
+    </view>
+    <view class="info03">
+      <text wx:for="{{detailsArr.directors}}" wx:key="{{item.id}}">{{item.name}}(导演) / </text>
+      <text wx:for="{{detailsArr.casts}}" wx:key="{{item.id}}">{{item.name}} {{index != detailsArr.casts.length-1 ? '/' : ''}} </text>
+    </view>
+    <view class="btn">
+      <button plain="true">看过</button>
+      <button plain="true" bindtap="btnClick">{{collect ? '收藏' : '已收藏'}}</button>
+    </view>
+  </view>
+  <!-- detail-summary -->
+  <view class="detail-summary">
+    <view class="intro">
+      {{detailsArr.title}}-剧情简介
+    </view>
+    <view class="summary">
+      {{detailsArr.summary}}
+    </view>
+  </view>
+</view>

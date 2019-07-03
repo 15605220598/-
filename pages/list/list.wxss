@@ -1,0 +1,61 @@
+.movie {
+  padding: 10rpx 20rpx;
+  font-size: 30rpx;
+}
+
+.movieItem {
+  height: 320rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.item {
+  display: flex;
+}
+
+.item-left {
+  width: 25%;
+  height: 236rpx;
+}
+
+.item-left image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.item-right {
+  width: 70%;
+  padding-left: 5%;
+}
+
+.movieTime {
+  font-size: 25rpx;
+  color: #DC143C;
+  padding: 10rpx 0;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.movieGenres {
+  border-radius: 10rpx;
+  background: #e2e2e2;
+  font-size: 24rpx;
+  padding: 7rpx;
+  font-weight: 600;
+}
+
+.date {
+  font-size: 25rpx;
+  padding: 0 0 10rpx 0;
+}
+
+.rank {
+  background: orange;
+  border-radius: 10rpx;
+  display: inline-block;
+  padding: 5rpx 10rpx;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}

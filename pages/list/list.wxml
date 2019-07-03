@@ -1,0 +1,31 @@
+<view class='container'>
+  <!-- 电影列表项 -->
+  <view class='movie' wx:for="{{movies}}" wx:key="{{index}}">
+    <navigator url='/pages/detail/detail?mID={{item.id}}&mTitle={{item.title}}'>
+      <view class='movieItem'>
+      <!-- 排名 -->
+      <view class='rank'>No.{{index+1}}</view>
+      <!-- 电影信息 -->
+      <view class='item'>
+      <!-- 左 -->
+      <view class='item-left'>
+      <image src="{{item.images.small}}"></image>
+      </view>
+      <!-- 右 -->
+      <view class='item-right'>
+      <text class='title'>{{item.title}}</text>
+      <view>
+        <i-rate value="{{item.rating.average/2}}" size="15">
+        <text class='rate'>{{item.rating.average/2}}</text>
+        </i-rate>
+      </view>
+        <view class='movieTime'>{{item.durations}}</view>
+        <view class='date'>{{item.pubdates[0]}}</view>
+        <view class='movieGenres'>{{item.genres}}/{{item.directors[0].name}}/<text wx:for="{{item.casts}}" wx:key="{{index}}">{{item.name}} </text></view>
+      </view>
+      </view>
+      </view>
+    </navigator>
+  </view>
+  <i-load-more></i-load-more>
+</view>
